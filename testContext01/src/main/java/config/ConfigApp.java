@@ -6,11 +6,12 @@ import org.springframework.context.annotation.Primary;
 
 import main.Clienti;
 
-@Configuration
+@Configuration //Classe di configurazione del nostro Spring
 public class ConfigApp 
 {
+	//Passandoci il name vai a nominare il bean.
 	@Bean(name = "Cliente1")
-	@Primary
+	@Primary //A parità di bean si prende quello che ha questa annotazione.
 	Clienti cliente1() 
 	{
 		Clienti cliente = new Clienti();
@@ -28,7 +29,7 @@ public class ConfigApp
 		return cliente;
 	}
 	
-	@Bean
+	@Bean //Si può creare un bean di qualsiasi tipo.
     String saluti()
     {
         return "Saluti da Spring Context";
